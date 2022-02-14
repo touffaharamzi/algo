@@ -1,0 +1,22 @@
+ALGORITHM chekpoint
+VAR
+    phrase: STRING:=""
+    sumv,len,i:INTEGER:=0;
+    sumw:INTEGER:=1;
+BEGIN
+    REPEAT
+        phrase:= WRITE("WRITE a phrase ");
+        READ (phrase);
+    UNTIL (phrase <>"")
+    REPEAT
+        len++;
+        i++;
+        if(char[i]=" ")
+        sumw++;
+        if(char[i]="a" or char[i]="e"  or char[i]="i" or char[i]="o" or char[i]="u" or char[i]="y" )
+        sumv++;    
+    UNTIL (char[i]=".")
+   WRITE ("length of the phrase is ",len) ;
+   WRITE ("number of word is ",sumw) ;
+   WRITE ("number of vowels",sumv) ;
+END
